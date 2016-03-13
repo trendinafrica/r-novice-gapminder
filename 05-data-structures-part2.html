@@ -216,7 +216,7 @@ df2</code></pre></div>
 13  f  6 219        1    F
 14  g 11  42        0    G
 </code></pre>
-<!-- 
+<!--
 When we add a row we need to use a list, because each column is
 a different type!  If you want to add multiple rows to a data.frame,
 you will need to separate the new columns in the list:
@@ -329,7 +329,7 @@ gapminder &lt;-<span class="st"> </span><span class="kw">read.csv</span>(
 <h2 id="challenge-3"><span class="glyphicon glyphicon-pencil"></span>Challenge 3</h2>
 </div>
 <div class="panel-body">
-<p>Go to file -&gt; new file -&gt; R script, and write an R script to load in the gapminder dataset. Put it in the <code>scripts/</code> directory and add it to version control.</p>
+<p>Go to file -&gt; new file -&gt; R script, and write an R script to load in the gapminder dataset. Put it in the <code>scripts/</code> directory.</p>
 <p>Run the script using the <code>source</code> function, using the file path as its argument (or by pressing the “source” button in RStudio).</p>
 </div>
 </section>
@@ -460,8 +460,8 @@ Call:
 lm(formula = lifeExp ~ year, data = gapminder)
 
 Coefficients:
-(Intercept)         year  
-  -585.6522       0.3259  
+(Intercept)         year
+  -585.6522       0.3259
 </code></pre>
 <p>Not much there right? But if we look at the structure…</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(reg)</code></pre></div>
@@ -500,7 +500,7 @@ Coefficients:
   .. ..- attr(*, &quot;order&quot;)= int 1
   .. ..- attr(*, &quot;intercept&quot;)= int 1
   .. ..- attr(*, &quot;response&quot;)= int 1
-  .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt; 
+  .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt;
   .. ..- attr(*, &quot;predvars&quot;)= language list(lifeExp, year)
   .. ..- attr(*, &quot;dataClasses&quot;)= Named chr [1:2] &quot;numeric&quot; &quot;numeric&quot;
   .. .. ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;lifeExp&quot; &quot;year&quot;
@@ -517,7 +517,7 @@ Coefficients:
   .. .. ..- attr(*, &quot;order&quot;)= int 1
   .. .. ..- attr(*, &quot;intercept&quot;)= int 1
   .. .. ..- attr(*, &quot;response&quot;)= int 1
-  .. .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt; 
+  .. .. ..- attr(*, &quot;.Environment&quot;)=&lt;environment: R_GlobalEnv&gt;
   .. .. ..- attr(*, &quot;predvars&quot;)= language list(lifeExp, year)
   .. .. ..- attr(*, &quot;dataClasses&quot;)= Named chr [1:2] &quot;numeric&quot; &quot;numeric&quot;
   .. .. .. ..- attr(*, &quot;names&quot;)= chr [1:2] &quot;lifeExp&quot; &quot;year&quot;
@@ -531,18 +531,18 @@ Call:
 lm(formula = lifeExp ~ year, data = gapminder)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--39.949  -9.651   1.697  10.335  22.158 
+    Min      1Q  Median      3Q     Max
+-39.949  -9.651   1.697  10.335  22.158
 
 Coefficients:
-              Estimate Std. Error t value Pr(&gt;|t|)    
+              Estimate Std. Error t value Pr(&gt;|t|)
 (Intercept) -585.65219   32.31396  -18.12   &lt;2e-16 ***
 year           0.32590    0.01632   19.96   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
 Residual standard error: 11.63 on 1702 degrees of freedom
-Multiple R-squared:  0.1898,    Adjusted R-squared:  0.1893 
+Multiple R-squared:  0.1898,    Adjusted R-squared:  0.1893
 F-statistic: 398.6 on 1 and 1702 DF,  p-value: &lt; 2.2e-16
 </code></pre>
 <p>As you might expect, life expectancy has slowly been increasing over time, so we see a significant positive association!</p>

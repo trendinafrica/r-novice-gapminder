@@ -35,7 +35,6 @@
 <div class="panel-body">
 <ul>
 <li>To be able to create self-contained projects in RStudio</li>
-<li>To be able to use git from within RStudio</li>
 </ul>
 </div>
 </section>
@@ -80,7 +79,6 @@ Managing your projects in a reproducible fashion doesn’t just make your scienc
 <li>Click “New Directory”.</li>
 <li>Click “Empty Project”.</li>
 <li>Type in the name of the directory to store your project, e.g. “my_project”.</li>
-<li>Make sure that the checkbox for “Create a git repository” is selected.</li>
 <li>Click the “Create Project” button.</li>
 </ol>
 </div>
@@ -100,7 +98,7 @@ Managing your projects in a reproducible fashion doesn’t just make your scienc
 <h2 id="tip-projecttemplate---a-possible-solution"><span class="glyphicon glyphicon-pushpin"></span>Tip: ProjectTemplate - a possible solution</h2>
 </div>
 <div class="panel-body">
-<p>One way to automate the management of projects is to install the third-party package, <code>ProjectTemplate</code>. This package will set up an ideal directory structure for project management. This is very useful as it enables you to have your analysis pipeline/workflow organised and structured. Together with the default RStudio project functionality and Git you will be able to keep track of your work as well as be able to share your work with collaborators.</p>
+<p>One way to automate the management of projects is to install the third-party package, <code>ProjectTemplate</code>. This package will set up an ideal directory structure for project management. This is very useful as it enables you to have your analysis pipeline/workflow organised and structured.</p>
 <ol style="list-style-type: decimal">
 <li>Install <code>ProjectTemplate</code>.</li>
 <li>Load the library</li>
@@ -140,29 +138,7 @@ Managing your projects in a reproducible fashion doesn’t just make your scienc
 <p>We will load and inspect these data later.</p>
 </div>
 </section>
-<h2 id="version-control">Version Control</h2>
-<p>We also set up our project to integrate with git, putting it under version control. RStudio has a nicer interface to git than shell, but is very limited in what it can do, so you will find yourself occasionally needing to use the shell. Let’s go through and make an initial commit of our template files.</p>
-<p>The workspace/history pane has a tab for “Git”. We can stage each file by checking the box: you will see a Green “A” next to stage files and folders, and yellow question marks next to files or folders git doesn’t know about yet. RStudio also nicely shows you the difference between files from different commits.</p>
-<aside class="callout panel panel-info">
-<div class="panel-heading">
-<h2 id="tip-versioning-disposable-output"><span class="glyphicon glyphicon-pushpin"></span>Tip: versioning disposable output</h2>
-</div>
-<div class="panel-body">
-<p>Generally you do not want to version disposable output (or read-only data). You should modify the <code>.gitignore</code> file to tell git to ignore these files and directories.</p>
-</div>
-</aside>
-<section class="challenge panel panel-success">
-<div class="panel-heading">
-<h2 id="challenge-2"><span class="glyphicon glyphicon-pencil"></span>Challenge 2</h2>
-</div>
-<div class="panel-body">
-<ol style="list-style-type: decimal">
-<li>Create a directory within your project called <code>graphs</code>.</li>
-<li>Modify the <code>.gitignore</code> file to contain <code>graphs/</code> so that this disposable output isn’t versioned.</li>
-</ol>
-<p>Add the newly created folders to version control using the git interface.</p>
-</div>
-</section>
+
         </div>
       </div>
       </article>
